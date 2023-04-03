@@ -10,8 +10,8 @@ body {
   overflow-x: hidden;
   font-family: "Bai Jamjuree", sans-serif;
   scroll-behavior: smooth;
-  /* color: var(--white-color); */
-  /* background-color: var(--black-gray2); */
+  color: var(--white-color);
+
   font-weight: 300;
 }
 html {
@@ -31,13 +31,14 @@ h3,
 p {
   margin-bottom: 0.5rem;
   text-transform: capitalize;
+  letter-spacing: 2px;
 }
 p {
   /* color: var(--gray-lightr2); */
-  color: var(--black-gray2);
+  color: var(--gray-lightr);
   line-height: 2;
-  padding: 0 20px;
-  font-size: 2rem;
+  /* padding: 0 20px; */
+  font-size: 0.8rem;
 }
 /* 
 ======================
@@ -50,7 +51,7 @@ global style
   --black-gray2: rgba(2, 2, 15, 0.973);
   --black-gray3: rgb(43, 42, 42);
   --gray-color: rgb(118, 117, 117);
-  --gray-lightr: rgb(107, 107, 107);
+  --gray-lightr: rgb(204, 203, 203);
   --gray-lightr2: rgb(238, 236, 236);
   --white-color: #fff;
   --white-color2: rgb(240, 237, 237);
@@ -60,33 +61,37 @@ global style
     inset 0.1rem -0.1rem 13px rgba(0, 0, 0, 0.1), inset 6px 6px 13px #fff,
     inset -6px -6px 13px rgba(0, 0, 0, 0.1);
   --transition: all ease 0.5s;
-  --red-color: rgb(238, 46, 33);
+  --b-color: rgba(19, 231, 214, 0.863);
 }
 
 .section {
   padding: 2rem 1rem;
   border-top: 1px solid #ddd;
   transition: transform 1s, opacity 1s;
+  background-color: var(--black-gray2);
 }
 a {
-  color: var(--black-gray);
+  color: var(--white-color);
   text-decoration: none;
   text-align: center;
 }
 
 .btn {
-  border: 1px solid var(--black-gray);
+  border: 1px solid var(--white-color);
   width: 25%;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .section-center {
   width: 100%;
   margin: 0 auto;
   max-width: 1120px;
+}
+.section-box {
   box-shadow: var(--box-shadow);
+  padding: 10px 0;
 }
 
 /* 
@@ -98,37 +103,34 @@ banner
   width: 80%;
   margin: 0 auto;
 }
-
-.banner h1 {
-  text-align: center;
-  font-size: 2rem;
-}
-.banner h4,
-p {
-  text-align: center;
-  font-size: 0.9rem;
-  margin: 1rem 0;
-}
-.banner p {
-  text-align: center;
-}
-
-span {
-  color: var(--red-color);
-}
-
-article {
-  margin-bottom: 2rem;
+.Banner-sec {
+  background: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.842)),
+    url("./images/administrator-developer-icon.svg") center/cover;
+  height: 100vh;
 }
 .banner {
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   box-shadow: var(--box-shadow);
 }
-
-.profile-info h2,
-h3 {
-  text-align: center;
+.banner h3 {
+  font-size: 0.8rem;
+  color: var(--b-color);
 }
+.banner h1 {
+  font-size: 2.3rem;
+}
+.banner h2 {
+  color: var(--gray-lightr-2);
+}
+
+/* .banner {
+  padding: 40px;
+  box-shadow: var(--box-shadow);
+} */
 
 .nav {
   position: fixed;
@@ -201,4 +203,23 @@ skill
   color: black;
   text-align: center;
   font-size: 0.7rem;
+}
+
+/* 
+======================
+projects
+======================
+*/
+
+.projects-img {
+  text-align: center;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  font-size: 0.9rem;
+}
+
+.projects img {
+  /* width: 200px; */
+  margin: 0 auto;
+  margin-top: -1rem;
 }
